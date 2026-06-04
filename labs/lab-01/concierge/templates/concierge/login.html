@@ -1,0 +1,20 @@
+{% extends 'concierge/base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card mt-5 shadow">
+            <div class="card-header text-center bg-dark text-white"><h4>Вхід у систему</h4></div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-dark w-100 mb-2">Увійти</button>
+                </form>
+                <div class="text-center">
+                    <a href="{% url 'register' %}">Немає аккаунту? Зареєструватись</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
