@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Зміна кольору</title>
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <button id="colorButton">Змінити колір</button>
+
+    <script>
+        const button = document.getElementById('colorButton');
+
+        button.addEventListener('click', () => {
+            fetch('color.json')
+                .then(response => response.text()) 
+                .then(text => {
+                    const data = JSON.parse(text);
+                    
+                    button.style.color = data.color;
+                    console.log("Колір успішно змінено на ->", data.color);
+                })
+                .catch(error => {
+                    console.error("Помилка завантаження або парсингу ->", error);
+                });
+        });
+    </script>
+</body>
+</html>
