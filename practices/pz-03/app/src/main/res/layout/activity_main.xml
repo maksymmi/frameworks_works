@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рівень 1: Частка чисел (a/b)"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/etNumA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введіть число a"
+            android:inputType="numberDecimal"/>
+        <EditText
+            android:id="@+id/etNumB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введіть число b"
+            android:inputType="numberDecimal"/>
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Поділити"/>
+        <TextView
+            android:id="@+id/tvResultDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textColor="#D32F2F"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рівень 2: Гра «Кістки»"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/etDiceCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Кількість кубиків"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/btnRollDice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Кинути кубики"/>
+        <TextView
+            android:id="@+id/tvResultDice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textColor="#388E3C"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рівень 3 та 4: Робота з файлами"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/btnProcessFiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Обробити тестові файли"/>
+        <TextView
+            android:id="@+id/tvResultFiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#1976D2"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>
